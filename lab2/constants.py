@@ -1,0 +1,22 @@
+"""Global constants."""
+
+MAX_VARIABLES = 5
+MAX_KARNAUGH_VARS = 4
+
+OPERATOR_PRIORITIES = {
+    '!': 4,
+    '&': 3,
+    '|': 2,
+    '->': 1,
+    '~': 1,
+}
+
+UNARY_OPERATORS = {'!'}
+BINARY_OPERATORS = {'&', '|', '->', '~'}
+
+TOKEN_VARIABLE = 'VARIABLE'
+TOKEN_OPERATOR = 'OPERATOR'
+TOKEN_LPAREN = 'LPAREN'
+TOKEN_RPAREN = 'RPAREN'
+
+SEPARATOR_LENGTH = 60
