@@ -1,7 +1,7 @@
 """Global constants."""
 
 MAX_VARIABLES = 5
-MAX_KARNAUGH_VARS = 4
+MAX_KARNAUGH_VARS = 5
 
 OPERATOR_PRIORITIES = {
     '!': 4,
