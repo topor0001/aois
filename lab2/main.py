@@ -125,7 +125,7 @@ def print_boolean_derivatives(deriv, variables):
 
 
 def print_karnaugh_results(karnaugh, variables):
-    if len(variables) <= 4:
+    if len(variables) <= 5:
         result_karnaugh_dnf, map_dnf = karnaugh.minimize_dnf()
         print("  ДНФ:")
         for line in map_dnf:
@@ -138,7 +138,7 @@ def print_karnaugh_results(karnaugh, variables):
             print(f"    {format_logic(line)}")
         print(f"    Результат: {format_logic(result_karnaugh_cnf)}")
     else:
-        print(f"  Карта Карно не поддерживается для {len(variables)} переменных. Максимум: 4")
+        print(f"  Карта Карно не поддерживается для {len(variables)} переменных. Максимум: 5")
 
 
 def run_all_tests():
@@ -202,10 +202,10 @@ def run_all_results(parser, truth_table, forms, post, zhegalkin, deriv, variable
     print_minimization_result(result_cnf, stages_cnf)
 
     print_separator("КАРТА КАРНО")
-    if len(variables) <= 4:
+    if len(variables) <= 5:
         print_karnaugh_results(KarnaughMap(truth_table), variables)
     else:
-        print(f"  Карта Карно не поддерживается для {len(variables)} переменных. Максимум: 4")
+        print(f"  Карта Карно не поддерживается для {len(variables)} переменных. Максимум: 5")
 
 
 def build_objects(expression: str):
